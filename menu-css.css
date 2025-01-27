@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Restaurante</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+        }
+        hr {
+            width: 95%;
+            margin: auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        article {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        img {
+            max-width: 100%;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+        form input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Antojos Porteños</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#orden">Ordenar</a></li>
+            </ul>
+        </nav>
+        <figure>
+            <img src="Antojos.jpeg" width="500" alt="portada elegante de presentación">
+            <figcaption>El mejor restaurante de antojos porteños en Buenos Aires, Argentina, ofreciendo comida típica y una atención personalizada.</figcaption>
+        </figure>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menú</h2>
+            <article>
+                <img src="Receta-empanadas.jpg" alt="Empanadas" width="200">
+                <h3>Empanadas de Cordero con Reducción de Malbec</h3>
+                <p>Empanadas rellenas de cordero tierno, cebolla caramelizada y especias, servidas con una reducción de vino Malbec. <em>\\$10.00</em></p>
+            </article>
+            <article>
+                <img src="provoleta.jpg" alt="Provoleta" width="200">
+                <h3>Provoleta al Romero y Miel</h3>
+                <p>Queso provolone derretido con romero fresco y un toque de miel, acompañado de pan casero. <em>\\$8.00</em></p>
+            </article>
+            <article>
+                <img src="Ceviche.webp" alt="Ceviche" width="200">
+                <h3>Ceviche de Trucha Andina</h3>
+                <p>Trucha fresca marinada en limón, cilantro y ají, servida con maíz tostado y batatas fritas. <em>\\$12.00</em></p>
+            </article>
+        </section>
+        <section id="orden">
+            <h2>Llamar Tu Orden</h2>
+            <form>
+                <h3>Entradas</h3>
+                <label for="empanadas">Empanadas de Cordero (cantidad):</label>
+                <input type="number" id="empanadas" name="empanadas" min="0" value="0">
+
+                <label for="provoleta">Provoleta al Romero (cantidad):</label>
+                <input type="number" id="provoleta" name="provoleta" min="0" value="0">
+
+                <label for="ceviche">Ceviche de Trucha (cantidad):</label>
+                <input type="number" id="ceviche" name="ceviche" min="0" value="0">
+
+                <h3>Extras</h3>
+                <label for="papas">Papas Fritas:</label>
+                <input type="checkbox" id="papas" name="extras" value="papas">
+
+                <label for="ensalada">Ensalada:</label>
+                <input type="checkbox" id="ensalada" name="extras" value="ensalada">
+
+                <h3>Bebida</h3>
+                <label for="agua">Agua:</label>
+                <input type="radio" id="agua" name="bebida" value="agua">
+
+                <label for="vino">Vino:</label>
+                <input type="radio" id="vino" name="bebida" value="vino">
+
+                <label for="refresco">Refresco:</label>
+                <input type="radio" id="refresco" name="bebida" value="refresco">
+
+                <label for="personalizado">Solicitudes Especiales:</label>
+                <textarea id="personalizado" name="personalizado" rows="4" cols="42" placeholder="Escriba aquí su pedido especial"></textarea><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Hecho con virtud y un poquito de CSS. JavierCode.</p>
+    </footer>
+</body>
+</html>
